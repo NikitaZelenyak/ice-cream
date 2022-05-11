@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./sass/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="modal__open is-hidden" data-modal>
+        <button class="close__btn" data-modal-close>
+          <svg width="14" ; height="14" ;>
+            <use href="./img/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <button class="header__button--modal" type="button">
+          Buy now
+          <svg width="6" height="10">
+            <use href="./img/symbol-defs.svg#icon-point"></use>
+          </svg>
+        </button>
+        <nav class="modal__nav">
+          <ul class="header__list--modal">
+            <li class="header__li--modal">
+              <a class="header__link--modal --current" href="">Home</a>
+            </li>
+            <li class="header__li--modal">
+              <a class="header__link--modal" href="#about">About us</a>
+            </li>
+            <li class="header__li--modal">
+              <a class="header__link--modal" href="#howMade">How it’s made?</a>
+            </li>
+            <li class="header__li--modal">
+              <a class="header__link--modal" href="#products">Our products</a>
+            </li>
+            <li class="header__li--modal">
+              <a class="header__link--modal" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container">
+        <header class="header">
+          <a href="" class="logo">
+            <picture>
+              <source
+                srcset="img/logo/logo1.png 1x, img/logo/logo1@2x.png 2x"
+              />
+              <img src="img/logo/logo1.png" alt="" />
+            </picture>
+          </a>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="">Home</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#about">About us</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#howMade">How it’s made?</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#products">Our products</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="hidden" id="but2">
+            <button class="header__btn-menu" data-modal-open id="but1">
+              <svg width="20px" height="12px">
+                <use
+                  class="header__btn-open"
+                  href="img/symbol-defs.svg#icon-Burger"
+                ></use>
+                <use
+                  class="header__btn-close"
+                  href="img/symbol-defs.svg#icon-close"
+                ></use>
+              </svg>
+            </button>
+            <button class="header__btn" type="button">
+              Buy now
+              <svg
+                class="header__icon"
+                width="6"
+                height="10"
+                viewBox="0 0 6 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L5 5L1 9"
+                  stroke="#D41443"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <section class="hero">
+          <div class="hero__wrapper-left">
+            <h1 class="hero__title">
+              ice cream made with
+              <span class="hero__title--accent">passion</span>
+            </h1>
+            <ul class="hero__list-left">
+              <li class="hero__item-left">
+                <button class="hero__btn-accent" type="button">Products</button>
+              </li>
+              <li class="hero__item-left">
+                <button class="hero__btn" type="button">How it’s made?</button>
+              </li>
+            </ul>
+            <div class="hero__box">
+              <picture class="hero__img-left">
+                <source
+                  srcset="
+                    img/header/milk-md.png    1x,
+                    img/header/milk-md@2x.png 2x
+                  "
+                  media="(min-width:768px) and (max-width:1279.5px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    img/header/milk-lg.png    1x,
+                    img/header/milk-lg@2x.png 2x
+                  "
+                  media="(min-width:1280px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    img/header/milk-md.webp    1x,
+                    img/header/milk-md@2x.webp 2x
+                  "
+                  media="(min-width:768px) and (max-width:1279.5px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/header/milk-lg.webp    1x,
+                    img/header/milk-lg@2x.webp 2x
+                  "
+                  media="(min-width:1280px)"
+                  type="image/webp"
+                />
+                <img src="img/header/milk-lg.png" alt="" />
+              </picture>
+
+              <div class="hero__thumb">
+                <p class="hero__text-left">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et
+                </p>
+                <button class="hero__modal-btn" type="button">
+                  <picture>
+                    <source
+                      srcset="
+                        img/header/arrow-right-md.png    1x,
+                        img/header/arrow-right-md@2x.png 2x
+                      "
+                      media="(min-width:768px) and (max-width:1279.5px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        img/header/arrow-right-lg.png    1x,
+                        img/header/arrow-right-lg@2x.png 2x
+                      "
+                      media="(min-width:1280px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        img/header/arrow-right-md.webp    1x,
+                        img/header/arrow-right-md@2x.webp 2x
+                      "
+                      media="(min-width:768px) and (max-width:1279.5px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        img/header/arrow-right-lg.webp    1x,
+                        img/header/arrow-right-lg@2x.webp 2x
+                      "
+                      media="(min-width:1280px)"
+                      type="image/webp"
+                    />
+                    <img src="img/header/arrow-right-lg.png" alt="" />
+                  </picture>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <ul class="hero__list-right">
+            <li class="hero__item-right">
+              <span class="hero__number">16</span>
+              <p class="hero__text-right">cafes</p>
+            </li>
+            <li class="hero__item-right hero__text-right--place">
+              <span class="hero__number">23</span>
+              <p class="hero__text-right">food trucks</p>
+            </li>
+          </ul>
+          <picture class="hero__img-middle">
+            <source
+              srcset="img/header/con-sm.png 1x, img/header/con-sm@2x.png 2x"
+              media="(max-width:767px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="img/header/cone-md.png 1x, img/header/cone-md@2x.png 2x"
+              media="(min-width:768px) and (max-width:1279.5px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="img/header/cone-lg.png 1x, img/header/cone-lg@2x.png 2x"
+              media="(min-width:1280px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="img/header/con-sm.webp 1x, img/header/con-sm@2x.webp 2x"
+              media="(max-width:767px)"
+              type="image/webp"
+            />
+            <source
+              srcset="img/header/cone-md.webp 1x, img/header/cone-md@2x.webp 2x"
+              media="(min-width:768px) and (max-width:1279.5px)"
+              type="image/webp"
+            />
+            <source
+              srcset="img/header/cone-lg.webp 1x, img/header/cone-lg@2x.webp 2x"
+              media="(min-width:1280px)"
+              type="image/webp"
+            />
+
+            <img src="img/header/cone-lg.png" alt="Ice Cream" />
+          </picture>
+          <picture class="hero__img-right">
+            <source
+              srcset="img/header/girl-md.png 1x, img/header/girl-md@2x.png 2x"
+              media="(min-width:768px) and (max-width:1279.5px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="img/header/girl-lg.png 1x, img/header/girl-lg@2x.png 2x"
+              media="(min-width:1280px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="img/header/girl-md.webp 1x, img/header/girl-md@2x.webp 2x"
+              media="(min-width:768px) and (max-width:1279.5px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="img/header/girl-lg.webp 1x, img/header/girl-lg@2x.webp 2x"
+              media="(min-width:1280px)"
+              type="image/webp"
+            />
+
+            <img src="img/header/girl-lg.png" alt="Soo Tasty" />
+          </picture>
+        </section>
+      </div>
+    </div>
+    <main>
+      <section class="products">
+        <div class="container">
+          <p class="products__text">100% natural</p>
+          <h2 class="products__title">products</h2>
+          <ul class="products__list">
+            <li class="products__item">
+              <div class="products__wrapper products__wrapper-color-one">
+                <h3 class="products__title-second">ice cream</h3>
+                <p class="products__text-second">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et
+                </p>
+                <button class="products__btn">
+                  <img src="./img/products/products-btn.jpg" alt="" />
+                </button>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__wrapper products__wrapper-color-two">
+                <h3 class="products__title-second">ice coffee</h3>
+                <p class="products__text-second">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et
+                </p>
+                <button class="products__btn">
+                  <img src="./img/products/products-btn.jpg" alt="" />
+                </button>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__wrapper products__wrapper-color-three">
+                <h3 class="products__title-second">milkshakes</h3>
+                <p class="products__text-second">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et
+                </p>
+                <button class="products__btn">
+                  <img src="./img/products/products-btn.jpg" alt="" />
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

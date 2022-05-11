@@ -1,0 +1,252 @@
+.products {
+  background-color: var(--main-color);
+  @include mq(mobile-only) {
+    padding: 80px 0px;
+  }
+
+  @include mq(tablet) {
+    padding: 40px 0px;
+  }
+
+  @include mq(desktop) {
+    padding: 60px 0px;
+  }
+
+  &__list {
+    @include mq(tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    position: relative;
+    @include mq(mobile-only) {
+      margin-top: 140px;
+
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+    @include mq(tablet) {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    @include mq(desktop) {
+      margin-right: 32px;
+    }
+  }
+
+  &__wrapper {
+    border-radius: 24px;
+
+    @include mq(mobile-only) {
+      margin-left: auto;
+      margin-right: auto;
+      min-width: 280px;
+      min-height: 489px;
+      padding: 40px;
+      padding-top: 160px;
+    }
+
+    @include mq(tablet) {
+      min-width: 224px;
+      min-height: 473px;
+      padding: 40px 32px;
+      padding-top: 118px;
+    }
+
+    @include mq(desktop) {
+      min-width: 395px;
+      min-height: 535px;
+      padding: 60px 76px;
+      padding-top: 165px;
+    }
+
+    &-color-one {
+      background: #ffb8ca;
+    }
+
+    &-color-two {
+      background: #f0d1a5;
+    }
+
+    &-color-three {
+      background: #c2e297;
+    }
+  }
+  &__item::before {
+    content: " ";
+    position: absolute;
+
+    z-index: 2;
+    background-repeat: no-repeat;
+
+    @include mq(mobile-only) {
+      left: 20%;
+      top: -28%;
+      width: 280px;
+      height: 280px;
+    }
+
+    @include mq(tablet) {
+      width: 224px;
+      height: 224px;
+      top: -30%;
+    }
+
+    @include mq(desktop) {
+      top: -50%;
+      width: 394px;
+      height: 394px;
+    }
+  }
+
+  &__item:nth-child(1)::before {
+    @include mq(mobile-only) {
+      background-image: url("/img/products/ice-cream_sm.png");
+    }
+    @include mq(tablet) {
+      background-image: url("/img/products/ice-cream_md.png");
+    }
+
+    @include mq(desktop) {
+      background-image: url("/img/products/ice-cream_lg.png");
+    }
+  }
+
+  &__item:nth-child(2)::before {
+    @include mq(mobile-only) {
+      background-image: url("/img/products/ice-coffee_sm.png");
+    }
+    @include mq(tablet) {
+      background-image: url("/img/products/ice-coffee_md.png");
+    }
+
+    @include mq(desktop) {
+      background-image: url("/img/products/ice-coffee_lg.png");
+    }
+  }
+
+  &__item:nth-child(3)::before {
+    @include mq(mobile-only) {
+      background-image: url("/img/products/milkshakes_sm.png");
+    }
+    @include mq(tablet) {
+      background-image: url("/img/products/milkshakes_md.png");
+    }
+
+    @include mq(desktop) {
+      background-image: url("/img/products/milkshakes_lg.png");
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    font-family: "Titan One";
+    text-transform: uppercase;
+    color: var(--text-color-light-pink);
+
+    @include mq(mobile-only) {
+      margin-bottom: 15px;
+
+      font-size: 18px;
+      line-height: 1.16;
+    }
+
+    @include mq(tablet) {
+      margin-bottom: 18px;
+      font-size: 26px;
+
+      line-height: 1.66;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 16px;
+
+      font-size: 30px;
+      line-height: 1.13;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-family: "Titan One";
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    line-height: 1.14;
+
+    @include mq(mobile-only) {
+      font-size: 34px;
+      margin-bottom: 148px;
+    }
+
+    @include mq(tablet) {
+      font-size: 48px;
+      margin-bottom: 154px;
+    }
+
+    @include mq(desktop) {
+      font-size: 58px;
+      line-height: 1.13;
+      letter-spacing: 0.06em;
+      margin-bottom: 258px;
+    }
+  }
+
+  &__title-second {
+    margin-bottom: 70px;
+    text-align: center;
+
+    font-family: "Titan One";
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--main-color);
+
+    @include mq(desktop) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
+  }
+
+  &__text-second {
+    margin-bottom: 32px;
+    text-align: center;
+
+    font-family: "DM Sans";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+    color: var(--main-color);
+
+    @include mq(mobile-only) {
+      line-height: 1.52;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 60px;
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    border: transparent;
+    background-color: transparent;
+  }
+}

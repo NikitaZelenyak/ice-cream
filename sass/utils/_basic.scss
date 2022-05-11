@@ -1,0 +1,69 @@
+.container{
+    max-width: 1280px;
+     padding: 0 16px;
+     margin: 0 auto;
+ 
+@media  screen and (min-width: 768px) and (max-width: 1279.5px) {
+    max-width: 768px;
+    
+}
+
+@media screen and (max-width: 767.5px) {
+    max-width: 480px;
+    
+}
+}
+ 
+ body {
+ font-family: var(--basic-font), sans-serif;
+@media screen and (max-width: 767.5px) {
+    &.is{
+     overflow: hidden; 
+    -webkit-overflow-scrolling: touch;
+    }
+}
+// @media screen and (orientation: landscape){
+// &.is {
+//     overflow: auto;
+//     -webkit-overflow-scrolling: touch;
+// }
+// }
+ }
+ 
+ img {
+     display: block;
+     max-width: 100%;
+     height: auto;
+     
+ }
+ 
+ 
+ 
+ h1, h2, h3, h3, h5, h6, p{
+ margin: 0;
+ padding: 0;
+ }
+ 
+ a{
+     text-decoration: none;
+ }
+ 
+ ul, li{
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+
+ /* робить елемент невидимим */
+ .visually-hidden {
+     position: absolute;
+     white-space: nowrap;
+     width: 1px;
+     height: 1px;
+     overflow: hidden;
+     border: 0;
+     padding: 0;
+     clip: rect(0 0 0 0);
+     clip-path: inset(50%);
+     margin: -1px;
+ }

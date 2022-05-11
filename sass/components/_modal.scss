@@ -1,0 +1,120 @@
+.modal__btn{
+    background:none;
+    border: none;
+
+}
+
+@media screen and (min-width: 1280px) {
+ .modal{
+     display: none;
+ }
+
+}
+@media screen  and (max-width: 1279.5px) {
+    .modal.is {
+        display: block;
+    
+    }
+}
+
+.modal {
+    display: none;
+}
+
+.modal__open.is-hidden{
+    top: -100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: top var(--kubik), opacity var(--kubik),
+    visibility var(--kubik);
+}
+
+.modal__open{
+position: absolute;
+width: 254px;
+height: 100vh;
+background-color: #E17992;
+z-index: 5;
+right: 0;
+top: 0;
+padding-top: 20px;
+opacity: 1;
+visibility: visible;
+transition: top var(--kubik),
+opacity var(--kubik), visibility var(--kubik);
+overflow-y: scroll;
+
+@media screen and (max-width: 767.5px) {
+     
+    width: 100vw;
+
+    
+}
+@media screen and (min-width: 768px) {
+  
+  position: fixed;
+
+
+}
+}
+
+.close__btn{
+display: flex;
+position: relative;
+right: 32px;
+ border: 0;
+ background: none;   
+ padding: 0;
+ margin-left: auto;   
+    
+}
+
+.header__button--modal{
+display: block;
+margin-top: 24px;
+@extend %middle-font;
+@extend %auto-margin;
+background: var(--main-color);
+border-radius: 22px;
+cursor: pointer;
+color: var(--akcent-color);
+padding: 13px 44px 15px;
+border: 0;
+
+svg {
+    margin-left: 14px;
+    position: relative;
+    top: 1px;
+}
+@media screen and (max-width: 767.5px) {
+
+padding: 13px 49px 15px;
+
+
+}
+}
+
+.modal__nav{
+margin-top: 20px;    
+}
+
+.header__li--modal{
+padding: 13px 20px 11px 20px;
+border-top: 1px solid #E18298;
+
+&:last-child{
+border-bottom: 1px solid #E18298;    
+}
+}
+
+.header__link--modal{
+  
+color: var(--main-color);    
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+
+&.--current{
+color: var(--akcent-color);
+}
+}

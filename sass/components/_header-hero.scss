@@ -1,0 +1,457 @@
+//
+.background {
+  background-color: var(--bg-color-pink);
+  @include mq(mobile-only) {
+    overflow: hidden;
+  }
+}
+.header {
+  @extend %align-flex;
+  @include mq(mobile-only) {
+    padding-top: 8px;
+  }
+
+  @include mq(tablet) {
+    padding-top: 32px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 35px;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    z-index: 2;
+    @include mq(notDesktop) {
+      display: none;
+    }
+  }
+  &__list {
+    @include mq(desktop) {
+      display: flex;
+    }
+  }
+  &__item {
+    @include mq(desktop) {
+      margin-right: 35px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    padding: 10px 0px;
+
+    font-family: var(--main-fonts);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.28;
+
+    color: var(--main-color);
+
+    @include transition(color);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: 1.31;
+    }
+  }
+
+  &__btn-menu {
+    @include mq(desktop) {
+      display: none;
+    }
+  }
+  &__btn-menu {
+    border: transparent;
+    background-color: transparent;
+
+    @include mq(tablet) {
+      margin-right: 32px;
+    }
+  }
+
+  &__btn-open {
+  }
+  &__btn-close {
+    display: none;
+  }
+  &__btn {
+    padding: 12px 36px;
+
+    border-radius: 22px;
+    border: transparent;
+    background-color: var(--main-color);
+
+    font-family: var(--main-fonts);
+    @extend %middle-font;
+    color: var(--accent-color);
+    cursor: pointer;
+
+    @include transition(color);
+    &:hover,
+    &:focus {
+      background-color: var(--background-hover);
+    }
+
+    @include mq(mobile-only) {
+      display: none;
+    }
+
+    @include mq(desktop) {
+      margin-left: auto;
+    }
+  }
+  &__icon {
+    margin-left: 12px;
+  }
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  @include mq(mobile-only) {
+    padding-top: 136px;
+    padding-bottom: 158px;
+  }
+  @include mq(tablet) {
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__wrapper-left {
+    z-index: 4;
+  }
+
+  &__title {
+    letter-spacing: 0.04em;
+    font-family: var(--secondary-fonts);
+
+    text-transform: uppercase;
+    color: var(--main-color);
+
+    @include mq(mobile-only) {
+      max-width: 218px;
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    @include mq(tablet) {
+      max-width: 162px;
+      font-size: 22px;
+      line-height: 1.13;
+    }
+    @include mq(desktop) {
+      font-size: 38px;
+      line-height: 1.15;
+      max-width: 277px;
+    }
+  }
+
+  &__title--accent {
+    color: var(--accent-color);
+
+    @include mq(mobile-only) {
+      font-size: 46px;
+    }
+
+    @include mq(tablet) {
+      font-size: 34px;
+    }
+    @include mq(desktop) {
+      font-size: 60px;
+    }
+  }
+
+  &__list-left {
+    margin-left: auto;
+    display: flex;
+    @include mq(notDesktop) {
+      margin-top: 20px;
+    }
+    @include mq(desktop) {
+      margin-top: 24px;
+    }
+  }
+
+  &__item-left:first-child {
+    @include mq(notDesktop) {
+      margin-right: 8px;
+    }
+
+    @include mq(desktop) {
+      margin-right: 12px;
+    }
+  }
+
+  &__btn {
+    border-radius: 20px;
+    border: transparent;
+
+    color: var(--accent-color);
+    font-family: var(--main-fonts);
+
+    background-color: var(--main-color);
+    cursor: pointer;
+
+    @include transition(color);
+    &:hover,
+    &:focus {
+      background-color: var(--background-hover);
+    }
+
+    @include mq(notDesktop) {
+      padding: 8px 12px;
+
+      font-size: 8px;
+      line-height: 1.25;
+    }
+
+    @include mq(desktop) {
+      padding: 11px 19px;
+
+      font-size: 14px;
+      line-height: 1.28;
+    }
+  }
+  &__btn-accent {
+    border-radius: 20px;
+    border: transparent;
+
+    color: var(--main-color);
+    font-family: var(--main-fonts);
+    font-weight: 400;
+    background-color: var(--accent-color);
+    cursor: pointer;
+
+    @include transition(color);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color-hover);
+    }
+
+    @include mq(notDesktop) {
+      padding: 7px 14px;
+
+      font-size: 8px;
+      line-height: 1.25;
+    }
+
+    @include mq(desktop) {
+      padding: 11px 24px;
+
+      font-size: 14px;
+      line-height: 1.28;
+    }
+  }
+
+  &__box {
+    display: flex;
+    margin-top: 20px;
+    z-index: 4;
+    align-items: center;
+
+    @include mq(mobile-only) {
+      display: none;
+    }
+  }
+
+  &__text-left {
+    font-family: var(--main-color);
+    font-weight: 400;
+    color: var(--main-color);
+
+    @include mq(tablet) {
+      max-width: 114px;
+
+      font-size: 8px;
+      line-height: 1.5;
+    }
+
+    @include mq(desktop) {
+      max-width: 200px;
+
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+
+  &__modal-btn {
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include mq(tablet) {
+      margin-top: 7px;
+    }
+
+    @include mq(desktop) {
+      margin-top: 20px;
+    }
+  }
+
+  &__list-right {
+    margin-left: auto;
+
+    @include mq(mobile-only) {
+      display: none;
+    }
+  }
+  &__item-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  &__item-right:last-child {
+    margin-top: 18px;
+  }
+
+  &__number {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    font-family: var(--secondary-fonts);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    @include mq(mobile-only) {
+      display: none;
+    }
+
+    color: var(--accent-color);
+    @include mq(tablet) {
+      font-size: 28px;
+      line-height: 1.14;
+    }
+    @include mq(desktop) {
+      font-size: 46px;
+      line-height: 1.13;
+    }
+  }
+
+  &__number::before {
+    position: absolute;
+    z-index: -1;
+
+    content: ' ';
+    background-color: var(--main-color);
+    border-radius: 50%;
+
+    @include mq(tablet) {
+      top: -3px;
+      right: -7px;
+      width: 16px;
+      height: 16px;
+    }
+    @include mq(desktop) {
+      top: -7px;
+      right: -15px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__text-right {
+    display: block;
+    margin-top: 2px;
+
+    font-family: var(--main-fonts);
+    color: var(--main-color);
+    font-weight: 400;
+
+    @include mq(tablet) {
+      font-size: 8px;
+      line-height: 1.25;
+    }
+
+    @include mq(desktop) {
+      font-size: 14px;
+      line-height: 1.28;
+    }
+  }
+}
+
+.hero {
+  &__img-middle {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    @include mq(mobile-only) {
+      bottom: 0px;
+      margin-left: auto;
+      right: 16px;
+    }
+
+    @include mq(tablet) {
+      left: 320px;
+    }
+
+    @include mq(desktop) {
+      left: 620px;
+    }
+  }
+  &__img-middle::before {
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+
+    content: '  ';
+    background-color: #ffa5ba;
+
+    @include mq(mobile-only) {
+      top: -14px;
+      left: -100px;
+      width: 346px;
+      height: 344px;
+    }
+    @include mq(tablet) {
+      top: -55px;
+      left: -93px;
+      width: 360px;
+      height: 360px;
+    }
+    @include mq(desktop) {
+      top: -51px;
+      left: -118px;
+      width: 540px;
+      height: 540px;
+    }
+  }
+
+  &__img-right {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0px;
+    @include mq(mobile-only) {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.header__nav {
+  margin-right: auto;
+}
+
+.hidden.is {
+  display: none;
+}
+
+// scroll
+html {
+  scroll-behavior: smooth;
+}
